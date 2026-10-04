@@ -28,11 +28,13 @@ safe-outputs:
 
 Read `notes/mona-notes.md` and the current `site/content/github-info.md` before making changes.
 
-Use the web-fetch tool to read all three:
+Use the `web_fetch` tool to read all three sources. Do not use shell commands such as `curl` to fetch them.
 
 - https://github.blog/latest/
 - https://github.blog/changelog/
 - https://awesome-copilot.github.com/workflows/
+
+Treat a failed fetch as an error, not as evidence that there are no relevant updates. If any source cannot be fetched, call `report_incomplete` with the source URL and error, and stop. Only decide that there is no relevant update after all three sources have been fetched successfully.
 
 Select only timely, useful items that fit Mona's editorial guidance and help developers learn GitHub. Keep updates short and practical, preserve the page's existing structure, and link to the official source for every update. Do not invent details or add items that are not supported by the fetched sources.
 
