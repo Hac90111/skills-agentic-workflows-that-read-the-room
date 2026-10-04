@@ -2,6 +2,7 @@
 name: update-github-info
 description: Keep the GitHub Info page current with concise, practical updates from official GitHub Blog and Changelog posts.
 intent: Help Mona keep the GitHub Info page useful and current with concise, source-linked guidance for developers.
+model: gpt-4.1
 on:
   schedule: daily
   workflow_dispatch:
